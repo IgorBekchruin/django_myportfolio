@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Личный блог {% endblock title %}
+{% block header-text %}Личный блог{% endblock  %}
+
+
+{% block content %}
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+		    <div class="post-list">
+			    <div class="post">
+                    {% for p in posts %}
+				    <p class="meta">Дата публикации: <span class="date">{{ p.time_update | date:"j E o"}}</span></p>
+                    <div class="images-blog">
+                        <i class="fas fa-edit" style="color: #1e90ff; font-size:40px; float: left;"></i>
+                    </div>
+				    <h2 class="title-blog"><a href="{% url 'post_detail' p.slug %}">{{ p.title }}</a></h2>
+				    <div class="entry">
+					    <p>{{ p.body | truncatewords:20 }} </p>
+				    </div>
+                    {% endfor %}
+			    </div>
+		    </div>
+        </div>
+	</div>
+</div>
+{% endblock content %}

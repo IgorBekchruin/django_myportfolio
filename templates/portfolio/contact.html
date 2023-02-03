@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Контакты {% endblock  %}
+{% block header-text %}Свяжитесь со мной{% endblock  %}
+        
+{% block content %}
+<!-- Contact Start -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row-contact">
+                <div class="col-md-4 card-contact">
+                    <i class="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i>
+                    <h4 class="font-weight-bold">Адрес</h4>
+                    <p>Ижевск, Удмуртия</p>
+                </div>
+                <div class="col-md-4 card-contact">
+                    <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
+                    <h4 class="font-weight-bold">Телефон</h4>
+                    <p>+7-999-999-99-99</p>
+                </div>
+                <div class="col-md-4 card-contact">
+                    <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
+                    <h4 class="font-weight-bold">Email</h4>
+                    <p>worki.iba@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: #f1f3ff">
+            <div class="comment-forms">
+            <h3 class="">Напишите мне</h3>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="form-group col-md-12">
+                    {{ form.name|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-12">
+                    {{ form.email|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-12">
+                    {{ form.message|as_crispy_field }}
+                </div>
+                <div class="buttn">
+                    <input type="submit" value="Отправить" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock content %}

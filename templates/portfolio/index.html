@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Главная страница {% endblock  %}
+{% block pre-header %}Здравствуйте! Меня зовут Игорь и я{% endblock  %}
+{% block header-text %}PYTHON WEB DEVELOPER{% endblock  %}
+        
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<section id="services">
+				<h2>Чем я занимаюсь</h2>
+				<div class="underline"></div>
+				<div class="row">
+					<div class="col-lg-6 col-md-6 services-item">
+						<div class="card-item">
+							<div class="images">
+								<i class="fa fa-cogs" style="color: #1e90ff; font-size:50px; text-align: center;"></i>
+							</div>
+							<div class="card-body">
+							  <h5 class="card-title">Backend</h5>
+							  <p class="card-text">
+								Разработка сложной backend логики для уже готового frontend'а,
+								либо по подробному техническому заданию с обеспечением максимальной
+								эффективности и производительности.</p>
+							</div>
+						  </div>
+					</div>
+					<div class="col-lg-6 col-md-6 services-item">
+						<div class="card-item">
+							<div class="images">
+								<i class="fa fa-laptop" style="color: #1e90ff; font-size:50px"></i>
+								<i class="fa fa-cogs" style="color: #762da9; font-size:50px"></i>
+							</div>
+							<div class="card-body">
+							  <h5 class="card-title">Full stack</h5>
+							  <p class="card-text">	Создание полноценных сайтов и веб-приложений, включающих себя
+								пользовательский интерфейс и сложную бизнес логику.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="col-md-12">
+			<section id="portfolio">
+				<h2 class="text-center">Мои работы</h2>
+				<div class="underline"></div>
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="portfolio-card">
+							<div class="portfolio-item" style="opacity: 1;">
+								<div class="portfolio-item-inner">
+									<figure class="bubba-effect">
+										<img alt="Телеграмм Бот" class=" ls-is-cached lazyloaded" src="{% static 'img/telebot.jpeg' %}">
+										<a href="https://github.com/IgorBekchruin/schedulebot">
+											<figcaption>
+												<h3>Телеграмм Бот</h3>
+												<p>Простой бот для просмотра расписания занятий</p>
+											</figcaption>
+										</a>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<div class="portfolio-card">
+							<div class="portfolio-item" style="opacity: 1;">
+								<div class="portfolio-item-inner">
+									<figure class="bubba-effect">
+										<img alt="Орион" class=" ls-is-cached lazyloaded" src="{% static 'img/orion.png' %}">
+										<a href="https://mycompany-xrwj.vercel.app/">
+											<figcaption>
+												<h3>ООО Орион</h3>
+												<p>корпоративный сайт</p>
+											</figcaption>
+										</a>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<div class="portfolio-card">
+							<div class="portfolio-item" style="opacity: 1;">
+								<div class="portfolio-item-inner">
+									<figure class="bubba-effect">
+										<img alt="ITNews" class=" ls-is-cached lazyloaded" src="{% static 'img/itnews.png' %}">
+										<a href="https://github.com/IgorBekchruin/itnews.git">
+											<figcaption>
+												<h3>ITNews</h3>
+												<p>Новостной сай</p>
+											</figcaption>
+										</a>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</section>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

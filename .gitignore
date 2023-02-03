@@ -1,0 +1,6 @@
+venv/
+mysite/mysite/__pycache__/
+mysite/portfolio/__pycache__/
+mysite/portfolio/migrations/__pycache__/
+mysite/blog/__pycache__/
+mysite/blog/migrations/__pycache__/

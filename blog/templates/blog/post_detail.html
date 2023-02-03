@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} {{ post_detail.title }} {% endblock title %}
+{% block header-text %}Личный блог{% endblock  %}
+
+
+{% block content %}
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+            <div class="post-page">
+                <div class="post-detail">
+                    <h2 class="post-detail-title">{{ post_detail.title }}</h2>
+                    <div class="d-flex">
+                        <p class="post-detail-date"><i class="fa fa-calendar-alt"></i> {{ post_detail.time_update| date:"j E o"}}</p>
+                        <p class="post-detail-count-comments"><i class="fa fa-comments"></i> 15 Comments</p>
+                    </div>
+                    <p class="post-detail-text">{{ post_detail.body}}</p>
+                </div>
+
+                <div class="comments-list">
+                    <h2 class="comments-title">Комментарии</h2>
+                    {% for comment in comments %}
+                    <div class="comment">
+                        <div class="vcard">
+                            <img src="{% static 'img/user.png' %}" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                            <h3>{{ comment.name}}</h3>
+                            <div class="meta">{{ comment.created_on | date:"j E o"}}</div>
+                            <p>{{ comment.description}}</p>
+                        </div>
+                    </div>        
+                    {% endfor %}
+                </div>
+                <div class="row" style="background-color: #f1f3ff">
+                    <div class="comment-forms">
+                    <h3 class="">Добавить комментарий</h3>
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="form-group col-md-12">
+                            {{ form.name|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-12">
+                            {{ form.email|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-12">
+                            {{ form.description|as_crispy_field }}
+                        </div>
+                        <div class="buttn">
+                            <input type="submit" value="Добавить комментарий" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+	</div>
+</div>
+{% endblock content %}

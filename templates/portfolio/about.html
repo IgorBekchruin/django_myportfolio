@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Обо мне {% endblock  %}
+{% block header-text %}Обо мне{% endblock  %}
+        
+{% block content %}
+<!-- About Start -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class='about-page'>
+				<div class="profile">
+					<img class="profile-img" src="{% static 'img/me.jpg' %}" alt="Image">
+					<p class="name">Бекчурин  <br/>Игорь</h1>
+					<h4 class="job">Web Developer</h4>
+					<h5 class="profile-title">Профиль</h5>
+					<hr>
+					<p class="about-text">Организован, обладаю хорошими знаниями в Python фреймворках и среде разработки. Люблю учиться, не сидеть на одном месте, двигаться вперед и развиваться.</p>
+				</div>
+
+				<div class="experience">
+					<h1>Опыт работы</h1>
+					<br>
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="">
+								<div class="card-body">
+								  <h5 class="card-title">2022 - н.в.</h5>
+								  <p>ООО "Орион"</p>
+								  <br><br><br><br><br>
+								  <h5 class="card-title">2018 - 2020</h5>
+								  <p>ООО "ИРЗ-Локомотив"</p>
+								</div>
+							  </div>
+						</div>
+
+						<div class="col-lg-6 col-md-6">
+							<div class="">
+								<div class="card-body">
+								  <h5 class="card-title">Специалист по цифровизации</h5>
+								  <p>Цифровизация документооборота, сельского и лесного хозяйства. Создание электронных карт полей и их обработка в режиме автопилота. Таксация лесного массива с помощью дронов для полного понимания качества материала.</p>
+								  <h5 class="card-title">Техник-конструктор 1 кат.</h5>
+								  <p>Разработка и сопровождение конструкторской документации для бортовых радиотехнических комплексов.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="skills">
+					<h1>Стек технологий</h1>
+					<br>
+					<div class="">
+						<ul>
+							<li>
+								<h4>Backend</h4>
+								<p class="m-0">
+									Django/Django Rest Framework
+								</p>
+								<div class="progress w-100 mb-2">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+									  80%
+								    </div>
+							  	</div>
+								<p class="m-0">
+									Nginx/Gunicorn
+								</p>
+								<div class="progress w-100 mb-2">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+									  60%
+								    </div>
+							  	</div>
+							</li>
+							<li>
+								<h4>Frontend</h4>
+								<p class="m-0">
+									HTML/CSS
+								</p>
+								<div class="progress w-100 mb-2">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+									  80%
+								    </div>
+							  	</div>
+								<p class="m-0">
+									Bootstrap/TailWindCSS
+								</p>
+								<div class="progress w-100 mb-2">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+									  70%
+								    </div>
+							  	</div>
+							</li>
+							<li>
+								<h4>Databases:</h4>
+								<p class="m-0">
+									SQL(PostgreSQL)
+								</p>
+								<div class="progress w-100 mb-2">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+									  50%
+								    </div>
+							  	</div>
+							</li>
+							<li>
+								<h4>Tools:</h4>
+								<p class="m-0">
+									GitHub/Docker
+								</p>
+								<div class="progress w-100 mb-2">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+									  70%
+								    </div>
+							  	</div>
+							</li>
+							<li>
+								<h4>Learning</h4>
+								<p class="m-0">JS/Vue.js</p>
+								<p class="m-0">Redis/MongoDB</p>
+								<p class="m-0">Celery</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="education">
+					<h1>Образование</h1>
+					<br>
+					<ul style="list-style: none;">
+						<li class="m-2">
+							<h4>2022 - н.в.</h4>
+							<p class="m-2" style="color: black">Курсы: SoloLearn, Нетология, Stepik, YouTube</p>
+							<ul>
+								<li>Python 3 Tutorial course. Программирование на Python. Обучающий курс Python от Сергея Балакирева.Объектно-ориентированное программирование на Python</li>
+								<li>WEB Парсинг на Python. Автоматизация тестирования с помощью Selenium и Python.</li>
+								<li>Django 3. Django 3 для python.</li>
+								<li>Курс Django Rest Framework. Уроки по Django REST Framework</li>
+							</ul>
+						</li>
+
+						<li class="m-2">
+							<h4>2019 - 2020</h4>
+							<p class="m-2" style="color: black">Магистратура: Ижевский государственный технический университет имени М.Т. Калашникова</p>
+							<p class="m-2">Специальность: Информационно-измерительные системы.</p>
+						</li>
+
+						<li class="m-2">
+							<h4>2019 - 2020</h4>
+							<p class="m-2" style="color: black">Курсы: Ижевский государственный технический университет имени М.Т. Калашникова</p>
+							<p class="m-2">Специальность: Аглийский язык.</p>
+						</li>
+
+						<li class="m-2">
+							<h4>2015 - 2019</h4>
+							<p class="m-2" style="color: black">Бакалавр: Ижевский государственный технический университет имени М.Т. Калашникова</p>
+							<p class="m-2">Специальность: Радиотехника.</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="hobbies">
+					<h1>Увлечения</h1>
+					<br>
+					<div class="row-hobby">
+						<div class="col-md-4 card-hobby">
+							<i class="fa fa-3x fa-graduation-cap mb-2 text-primary" aria-hidden="true"></i>
+							<p>Спорт</p>
+						</div>
+						<div class="col-md-4 card-hobby">
+							<i class="fa fa-3x fa-plane mb-2 text-primary" aria-hidden="true"></i>
+							<p>Путешествия</p>
+						</div>
+						<div class="col-md-4 card-hobby">
+							<i class="fa fa-3x fa-music mb-2 text-primary" aria-hidden="true"></i>
+							<p>Музыка</p>
+						</div>
+
+						<div class="col-md-4 card-hobby">
+							<i class="fa fa-3x fa-graduation-cap mb-2 text-primary" aria-hidden="true"></i>
+							<p>Самобразование</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About End -->
+{% endblock %}
