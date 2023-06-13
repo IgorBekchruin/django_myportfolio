@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
-DATABASES['default'] = dj_database_url.config(
+DATABASES = dj_database_url.config(
     default='postgresql://postgres:8bHdfvbTqycZnWvt4hBj@containers-us-west-113.railway.app:6924/railway',
     conn_max_age=600,
     conn_health_checks=True,
