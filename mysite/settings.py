@@ -99,6 +99,7 @@ DATABASES = dj_database_url.config(
     conn_health_checks=True,
 )
 
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
